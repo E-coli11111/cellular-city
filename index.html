@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cellular City | Brand Pitch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'manhwa-ink': '#1a1a1a',
+              'manhwa-paper': '#f4f4f0',
+              'manhwa-accent-red': '#e63946',
+              'manhwa-accent-blue': '#1d4ed8',
+              'manhwa-dark-blue': '#0f172a',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              serif: ['Georgia', 'Times New Roman', 'serif'],
+            },
+            backgroundImage: {
+              'halftone': 'radial-gradient(circle, #1a1a1a 1px, transparent 1px)',
+            },
+            boxShadow: {
+              'comic': '4px 4px 0px 0px #1a1a1a',
+              'comic-lg': '8px 8px 0px 0px #1a1a1a',
+              'comic-hover': '2px 2px 0px 0px #1a1a1a',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .bg-halftone {
+        background-size: 20px 20px;
+        opacity: 0.1;
+      }
+      .text-shadow-comic {
+        text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
+      }
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f4f0; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1a1a1a; 
+        border: 2px solid #f4f4f0;
+      }
+      
+      /* Photo sway animation */
+      @keyframes sway {
+        0%, 100% {
+          transform: rotate(var(--rotation, 0deg)) translateX(0) translateY(0);
+        }
+        25% {
+          transform: rotate(calc(var(--rotation, 0deg) + 1deg)) translateX(2px) translateY(-1px);
+        }
+        50% {
+          transform: rotate(var(--rotation, 0deg)) translateX(0) translateY(0);
+        }
+        75% {
+          transform: rotate(calc(var(--rotation, 0deg) - 1deg)) translateX(-2px) translateY(1px);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-manhwa-paper text-manhwa-ink overflow-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
