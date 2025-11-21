@@ -42,7 +42,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
       <div className="absolute bottom-4 right-4 w-0 h-0 md:w-4 md:h-4 bg-manhwa-ink z-50 hidden md:block"></div>
 
       {/* Header */}
-      <header className="relative z-40 px-4 md:px-10 py-4 flex justify-between items-center h-16 md:h-20 shrink-0">
+      <header className="relative z-0 px-4 md:px-10 py-4 flex justify-between items-center h-16 md:h-20 shrink-0">
         <div className="flex items-center space-x-3">
           <div className="bg-manhwa-ink text-manhwa-paper px-3 py-1 font-black text-lg md:text-xl tracking-tighter transform -rotate-2 shadow-comic-hover">
             CELLULAR CITY
@@ -97,7 +97,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
       )}
 
       {/* Main Content Area */}
-      <main className="relative z-10 flex-1 flex flex-col p-4 md:p-8 lg:px-16 overflow-hidden">
+      <main className="relative z-1000 flex-1 flex flex-col p-2 md:p-2 lg:px-16 overflow-hidden">
         <div className="w-full max-w-7xl mx-auto h-full flex flex-col justify-center animate-fadeIn relative">
           {children}
         </div>

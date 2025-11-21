@@ -24,7 +24,7 @@ export const CharacterProfile: React.FC<CharacterProfileProps> = ({ data, availa
       <div className="lg:w-3/5 w-full flex flex-col gap-4">
         
         {/* Two Images Side by Side */}
-        <div className="flex-1 flex gap-6 min-h-[500px]">
+        <div className="flex-1 flex gap-6 min-h-[500px] m-6">
           {/* First Image with Pins */}
           <div className="flex-1 relative bg-transparent overflow-visible flex items-center justify-center">
             {image1 ? (
@@ -36,7 +36,7 @@ export const CharacterProfile: React.FC<CharacterProfileProps> = ({ data, availa
                 } as React.CSSProperties}
               >
                 {/* Photo Frame Effect */}
-                <div className="relative bg-white p-3 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15),0_0_20px_rgba(0,0,0,0.1)] border-[3px] border-manhwa-ink">
+                <div className="relative z-10000 bg-white p-3 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15),0_0_20px_rgba(0,0,0,0.1)] border-[3px] border-manhwa-ink max-w-95% max-h-95% ">
                   <img 
                     src={image1} 
                     alt={`${data.name} 1`} 

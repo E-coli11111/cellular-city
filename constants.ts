@@ -258,6 +258,10 @@ export const SLIDES: SlideContent[] = [
         {
           title: '转化效果 (Conversion)',
           points: ['天猫/抖音小店搜索量激增', '角色联名礼盒售罄率 95%', '私域社群活跃度提升']
+        },
+        {
+          title: '净推荐值 (NPS)',
+          points: ['参展后用户满意度调查 NPS 增加 20%', '视频内容好评率 > 90%', '用户复购率提升 25%']
         }
       ]
     }

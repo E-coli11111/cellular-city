@@ -112,12 +112,15 @@ function App() {
     switch (slide.type) {
       case SlideType.COVER:
         return (
-          <div className="flex flex-col items-center justify-center h-full w-full relative">
+          <div className="flex flex-col items-center justify-center h-full w-full relative ">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-64 h-64 border-r-4 border-t-4 border-manhwa-ink opacity-20"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 border-l-4 border-b-4 border-manhwa-ink opacity-20"></div>
             
-            <div className="relative z-10 bg-white border-4 border-manhwa-ink shadow-comic-lg p-12 md:p-20 text-center max-w-5xl transform rotate-1">
+            <div
+              className="relative z-10 bg-white border-4 border-manhwa-ink shadow-comic-lg p-20 md:p-20 text-center transform rotate-1
+                         max-w-[calc(100%-2rem)] max-h-[calc(100%-2rem)]"
+            >
               <div className="absolute -top-8 -left-8 bg-manhwa-accent-red text-white px-6 py-2 font-bold text-xl border-2 border-manhwa-ink shadow-comic transform -rotate-3">
                 PITCH DECK
               </div>
@@ -181,9 +184,9 @@ function App() {
               {slide.subtitle && <p className="text-xl font-serif italic text-slate-500">{slide.subtitle}</p>}
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1 overflow-y-auto pb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 flex-1 overflow-y-auto pb-8 mt-4">
               {slide.data.sections.map((section: any, idx: number) => (
-                <div key={idx} className="relative bg-white border-2 border-manhwa-ink p-6 shadow-comic group hover:-translate-y-1 transition-transform duration-300">
+                <div key={idx} className="relative bg-white border-2 border-manhwa-ink p-6 ml-4 mt-6 shadow-comic group hover:-translate-y-1 transition-transform duration-300">
                   {/* Panel Number */}
                   <div className="absolute -top-4 -left-4 w-8 h-8 bg-manhwa-ink text-white flex items-center justify-center font-black border-2 border-white shadow-sm transform group-hover:rotate-12 transition-transform">
                     {idx + 1}
